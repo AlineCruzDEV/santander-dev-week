@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
- xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinatorHome"
@@ -19,47 +18,48 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_marginStart="0dp"
-            android:paddingEnd="8dp"
-            android:paddingStart="8dp">
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
 
             <ImageView
                 android:id="@+id/imageMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_menu"
-                android:scaleType="centerInside"
+                android:layout_gravity="start"
                 android:adjustViewBounds="true"
-                android:layout_gravity="start" />
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_menu" />
 
             <ImageView
                 android:id="@+id/imageHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/logo_santander_white"
-                android:scaleType="centerInside"
+                android:layout_gravity="center"
                 android:adjustViewBounds="true"
-                android:layout_gravity="center" />
+                android:scaleType="centerInside"
+                android:src="@drawable/logo_santander_white" />
 
             <ImageView
                 android:id="@+id/imageNotification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_notification"
-                android:scaleType="centerInside"
+                android:layout_gravity="end"
                 android:adjustViewBounds="true"
-                android:layout_gravity="end" />
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_notification" />
 
 
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include
-        android:id="@+id/fragmentContainer"
-        layout="@layout/fragment_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp" />
 
+    <fragment
+        android:id="@+id/fragmentManagerAccounts"
+        android:name="com.alinecruz.devweek.presentation.view.HomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:layout="@layout/fragment_home" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
