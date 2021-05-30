@@ -10,7 +10,7 @@ import org.koin.dsl.module
 class SetupGlobalDependencies (private val applicationContext: Context) {
 
     private val appModule = module {
-
+        availableServiceModule
     }
 
     fun init(){

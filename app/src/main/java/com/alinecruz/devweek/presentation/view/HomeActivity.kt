@@ -11,9 +11,6 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         //SetupGlobalDependencies(this).init()
-
-
     }
-
 
 }

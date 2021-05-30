@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.alinecruz.devweek.R
 import com.alinecruz.devweek.data.AvailableService
 
-class ServiceAdapter(private val listServices: List<AvailableService>, val context: FragmentActivity?) :  RecyclerView.Adapter<ServiceAdapter.ServiceViewHolder>(){
+class ServiceAdapter(private val listServices: List<AvailableService>, private val context: FragmentActivity?) :  RecyclerView.Adapter<ServiceAdapter.ServiceViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ServiceViewHolder {

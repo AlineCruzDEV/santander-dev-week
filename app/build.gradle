@@ -53,7 +53,14 @@ dependencies {
 
     /* Koin Android Scope features */
     implementation "org.koin:koin-android-scope:2.0.1"
+    
+    /* Koin Android Experimental features */
+    implementation "org.koin:koin-android-ext:2.0.1"
 
+    /*  Koin for Java */
+    implementation "org.koin:koin-java:2.0.1"
 
+    /* Koin Test*/
+    testImplementation "org.koin:koin-test:2.0.1"
 
 }
