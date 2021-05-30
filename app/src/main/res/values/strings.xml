@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">santander-dev-week</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ola">Olá, </string>
+    <string name="client">Aline</string>
+    <string name="agency">Ag</string>
+    <string name="account">Cc</string>
+    <string name="saldo_disponivel">Saldo Disponível</string>
+    <string name="ver_extrato">Ver extrato</string>
+    <string name="cartao_final">Cartão final</string>
+
+</resources>

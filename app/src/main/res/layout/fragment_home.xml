@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.view.HomeFragment">
+
+
+    <ImageView
+        android:id="@+id/imageHomeBackgroundRed"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:6"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/red_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textHomeHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ola"
+        app:layout_constraintTop_toTopOf="@id/imageHomeBackgroundRed"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/textHomeClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aline"
+        android:layout_marginStart="6dp"
+        app:layout_constraintTop_toTopOf="@id/textHomeHello"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/textHomeHello"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/textHomeAgency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/agency"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/textHomeHello"
+        app:layout_constraintStart_toStartOf="@id/textHomeHello"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textHomeNumberAgency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="6543"
+        app:layout_constraintTop_toTopOf="@id/textHomeAgency"
+        app:layout_constraintStart_toEndOf="@id/textHomeAgency"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textHomeAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toTopOf="@id/textHomeNumberAgency"
+        app:layout_constraintStart_toEndOf="@id/textHomeNumberAgency"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textHomeNumberAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="6543"
+        app:layout_constraintTop_toTopOf="@id/textHomeAccount"
+        app:layout_constraintStart_toEndOf="@id/textHomeAccount"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardHomeBalanceAvailable"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textHomeAgency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraintHomeAvailableServices"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="32dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageHomeBalanceAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_update_balance"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/textHomeBalanceAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/imageHomeBalanceAvailable"
+                app:layout_constraintStart_toEndOf="@id/imageHomeBalanceAvailable"
+                app:layout_constraintBottom_toBottomOf="@id/imageHomeBalanceAvailable"
+                android:layout_marginStart="16dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/saldo_disponivel"/>
+
+            <ImageView
+                android:id="@+id/imageHomeHideCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hide_card"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/textHomeBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/imageHomeBalanceAvailable"
+                app:layout_constraintStart_toStartOf="@id/imageHomeBalanceAvailable"
+                android:textStyle="bold"
+                android:text="R$ 4.328,54"
+                android:layout_marginTop="24dp"
+                android:textSize="24sp"
+                />
+
+            <TextView
+                android:id="@+id/textHomeBalancePlusLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/textHomeBalance"
+                app:layout_constraintStart_toStartOf="@id/textHomeBalance"
+                android:textStyle="bold"
+                android:text="Saldo + Limite"
+                />
+
+            <TextView
+                android:id="@+id/textHomeBalanceTotalPlusLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/textHomeBalancePlusLimit"
+                app:layout_constraintStart_toEndOf="@id/textHomeBalancePlusLimit"
+                android:textStyle="bold"
+                android:text="R$ 6.328,54"
+                android:layout_marginStart="8dp"
+                />
+
+            <View
+                android:id="@+id/viewHomeBalanceAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                app:layout_constraintTop_toBottomOf="@id/textHomeBalanceTotalPlusLimit"
+                android:background="@android:color/darker_gray"
+                android:layout_margin="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_ver_extrato"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/ver_extrato"
+                android:textColor="@color/red_secondary"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewHomeBalanceAvailable" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintHomeAvailableServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardHomeBalanceAvailable">
+
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerHomeAvailableServices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:itemCount="5"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/item_services_available"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageHomeBackgroundCreditCard"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_margin="16dp"
+        android:background="@color/red_primary"
+        app:layout_constraintTop_toBottomOf="@id/constraintHomeAvailableServices"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintCircleRadius="20dp"
+        />
+    <TextView
+        android:id="@+id/textHomeFinalCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cartao_final"
+        app:layout_constraintStart_toStartOf="@id/imageHomeBackgroundCreditCard"
+        app:layout_constraintTop_toTopOf="@id/imageHomeBackgroundCreditCard"
+        app:layout_constraintBottom_toBottomOf="@id/imageHomeBackgroundCreditCard"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/textHomeNumberFinalCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234"
+        app:layout_constraintStart_toEndOf="@id/textHomeFinalCard"
+        app:layout_constraintTop_toTopOf="@id/textHomeFinalCard"
+        app:layout_constraintBottom_toBottomOf="@id/textHomeFinalCard"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/imageHomeExpandCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_expand_card"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toTopOf="@id/textHomeFinalCard"
+        app:layout_constraintBottom_toBottomOf="@id/textHomeFinalCard"
+        app:layout_constraintEnd_toEndOf="@id/imageHomeBackgroundCreditCard"
+        app:tint="@android:color/white"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

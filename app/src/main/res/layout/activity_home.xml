@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorHome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.view.HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayoutHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/red_primary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarHome"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginStart="0dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp">
+
+            <ImageView
+                android:id="@+id/imageMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_gravity="start" />
+
+            <ImageView
+                android:id="@+id/imageHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_santander_white"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imageNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_notification"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_gravity="end" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:id="@+id/fragmentContainer"
+        layout="@layout/fragment_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
