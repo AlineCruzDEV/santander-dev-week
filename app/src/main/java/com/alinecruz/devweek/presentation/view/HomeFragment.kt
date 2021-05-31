@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.alinecruz.devweek.R
 import com.alinecruz.devweek.data.AvailableService
 import com.alinecruz.devweek.data.local.MockData
-import com.alinecruz.devweek.di.injectAvailableServicesModule
+import com.alinecruz.devweek.presentation.adapter.ServiceAdapter
 import com.alinecruz.devweek.presentation.viewmodel.HomeViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.text.NumberFormat

@@ -1,4 +1,4 @@
-package com.alinecruz.devweek.presentation.view
+package com.alinecruz.devweek.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.View
