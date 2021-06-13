@@ -7,8 +7,8 @@
     <string name="agencia">Ag</string>
     <string name="conta">Cc</string>
     <string name="saldo_disponivel">Saldo Disponível</string>
-    <string name="ver_extrato">Ver extrato</string>
-    <string name="cartao_final">Cartão final</string>
+    <string name="ver_extrato">Ver Extrato</string>
+    <string name="cartao_final">Cartão Final</string>
     <string name="saldo_mais_limite">Saldo + Limite:</string>
     <string name="pagar">Pagar</string>
     <string name="transferir">Transferir</string>
