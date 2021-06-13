@@ -3,11 +3,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ola">Olá, </string>
-    <string name="client">Aline</string>
-    <string name="agency">Ag</string>
-    <string name="account">Cc</string>
+    <string name="cliente">Aline</string>
+    <string name="agencia">Ag</string>
+    <string name="conta">Cc</string>
     <string name="saldo_disponivel">Saldo Disponível</string>
     <string name="ver_extrato">Ver extrato</string>
     <string name="cartao_final">Cartão final</string>
+    <string name="saldo_mais_limite">Saldo + Limite:</string>
+    <string name="pagar">Pagar</string>
+    <string name="transferir">Transferir</string>
+    <string name="recarga">Recarga</string>
+    <string name="comprovantes">Comprovantes</string>
+
 
 </resources>
