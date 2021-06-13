@@ -1,5 +1,6 @@
 package com.alinecruz.devweek.data.local
 
+import android.content.Context
 import com.alinecruz.devweek.R
 import com.alinecruz.devweek.data.Account
 import com.alinecruz.devweek.data.AvailableService
@@ -15,13 +16,13 @@ class MockData() {
         return Account("4321", "987654-2", client, 132455.23, 15000.00, card)
     }
 
-    fun getMockAvailableServices(): List<AvailableService> {
+    fun getMockAvailableServices(context: Context?): List<AvailableService> {
         lateinit var list: List<AvailableService>
 
-        val servicePay = AvailableService("Pagar", R.drawable.ic_service_pay)
-        val serviceTransfer = AvailableService("Transferir", R.drawable.ic_service_transfer)
-        val serviceRecharge = AvailableService("Recarga", R.drawable.ic_service_recharge)
-        val serviceVoucher = AvailableService("Comprovantes", R.drawable.ic_service_voucher)
+        val servicePay = AvailableService(context!!.getString(R.string.pagar), R.drawable.ic_service_pay)
+        val serviceTransfer = AvailableService(context!!.getString(R.string.transferir), R.drawable.ic_service_transfer)
+        val serviceRecharge = AvailableService(context!!.getString(R.string.recarga), R.drawable.ic_service_recharge)
+        val serviceVoucher = AvailableService(context!!.getString(R.string.comprovantes), R.drawable.ic_service_voucher)
 
         list = listOf(servicePay, serviceTransfer, serviceRecharge, serviceVoucher)
 

@@ -10,14 +10,20 @@ import androidx.lifecycle.ViewModelProvider
 import com.alinecruz.devweek.R
 import com.alinecruz.devweek.data.AvailableService
 import com.alinecruz.devweek.data.local.MockData
+import com.alinecruz.devweek.di.injectAvailableServicesModule
 import com.alinecruz.devweek.presentation.adapter.ServiceAdapter
 import com.alinecruz.devweek.presentation.viewmodel.HomeViewModel
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.text.NumberFormat
 import java.util.*
+import org.koin.android.viewmodel.ext.android.viewModel
 
 
 class HomeFragment : Fragment() {
+
+    init {
+        //injectAvailableServicesModule()
+    }
 
     private lateinit var listServices: List<AvailableService>
     private lateinit var adapter: ServiceAdapter
@@ -25,17 +31,11 @@ class HomeFragment : Fragment() {
     private lateinit var viewModel: HomeViewModel
     //private val viewModel: HomeViewModel by viewModel()
 
-
-    init {
-        //injectAvailableServicesModule()
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun loadAccount() {
-        val myCountry : Locale = Locale("pt", "br")
+        val myCountry: Locale = Locale("pt", "br")
 
         activity?.let { it ->
             viewModel.fetchAccount().observe(it, Observer {
@@ -57,8 +57,11 @@ class HomeFragment : Fragment() {
                 textHomeClient.text = it.user.firstName + " " + it.user.lastName
                 textHomeNumberAgency.text = it.agency
                 textHomeNumberAccount.text = it.accountNumber
-                textHomeBalance.text = NumberFormat.getCurrencyInstance(myCountry).format(it.balance).toString()
-                textHomeBalanceTotalPlusLimit.text = NumberFormat.getCurrencyInstance(myCountry).format(it.balance + it.limit).toString()
+                textHomeBalance.text =
+                    NumberFormat.getCurrencyInstance(myCountry).format(it.balance).toString()
+                textHomeBalanceTotalPlusLimit.text =
+                    NumberFormat.getCurrencyInstance(myCountry).format(it.balance + it.limit)
+                        .toString()
                 textHomeNumberFinalCard.text = finalNumberCard
 
             })
@@ -66,7 +69,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun setupRecycler() {
-        listServices = mockData.getMockAvailableServices()
+        listServices = mockData.getMockAvailableServices(context)
         adapter = ServiceAdapter(listServices, activity)
 
         recyclerHomeAvailableServices.adapter = adapter

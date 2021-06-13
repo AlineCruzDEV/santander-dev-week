@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">santander-dev-week</string>
+    <string name="comprovantes">Vouchers</string>
+    <string name="recarga">Recharge</string>
+    <string name="transferir">Transfer</string>
+    <string name="pagar">Pay</string>
+    <string name="saldo_mais_limite">Balance + Limit:</string>
+    <string name="saldo_disponivel">Balance Available</string>
+    <string name="ver_extrato">View Extract</string>
+    <string name="cartao_final">Final Card</string>
+    <string name="agencia">Agency</string>
+    <string name="conta">Account</string>
+    <string name="ola">Hello,</string>
+    <string name="cliente">Aline</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
